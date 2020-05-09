@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/bootstrap.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/httpVueLoader.js"></script>
+    <title>Contact - Minders Gold Brewery</title>
+    <style>
+        .input {
+            opacity: .5;
+            font-weight: 700;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <v-nav type="main"></v-nav>
+        <v-article img="images/Miner_sGoldBrewery-32_large.jpg" type="article">
+            <h1>Contact</h1>
+            <p>
+                Our taproom is currently closed to the public, but takeaway beer sales are welcome.
+            </p>
+            <p>
+                Please call 03 6330 1133 (or use the form below).
+                <br>
+                <small>Any question? let us know</small>
+            </p>
+            <div class="w-100 text-left">
+                <form action="#">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" class="form-control input" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" name="phone" class="form-control input" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" class="form-control input" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" class="form-control input" cols="30" rows="10" required></textarea>
+                    </div>
+                    <div class="form-group text-center">
+                        <button type="submit" class="btn btn-info w-25">Send</button>
+                    </div>
+                </form>
+            </div>
+
+        </v-article>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

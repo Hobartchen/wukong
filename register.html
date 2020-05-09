@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/bootstrap.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/httpVueLoader.js"></script>
+    <title>Register - Minders Gold Brewery</title>
+    <style>
+        label,
+        .input {
+            display: inline-block;
+        }
+
+        .input {
+            width: 20em;
+        }
+
+        label {
+            width: 10em;
+        }
+
+        .form-end {
+            border-bottom: 2px solid black;
+        }
+
+        .btm-w {
+            max-width: 400px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <v-nav type="reg"></v-nav>
+        <div class="container text-center mt-5">
+            <h4>Glad to see you!</h4>
+            <p>Join us to have a fantastic experience!</p>
+        </div>
+        <div class="container text-center">
+            <form action="#">
+                <div class="d-flex flex-column justify-content-start">
+                    <!-- Row 1 -->
+                    <div class="d-flex flex-md-row flex-column justify-content-around">
+                        <div class="form-group">
+                            <label for="fname">First Name</label>
+                            <input type="text" name="fname" placeholder="First Name*" class="form-control input"
+                                required />
+                        </div>
+                        <div class="form-group">
+                            <label for="lname">Last Name</label>
+                            <input type="text" name="lname" placeholder="Last Name*" class="form-control input"
+                                required />
+                        </div>
+                    </div>
+                    <!-- Row 2 -->
+                    <div class="d-flex flex-md-row flex-column justify-content-around">
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" name="email" placeholder="Email Address*" class="form-control input"
+                                required />
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" name="phone" placeholder="Phone Number*" class="form-control input"
+                                required />
+                        </div>
+                    </div>
+                    <!-- Row 3 -->
+                    <div class="d-flex flex-md-row flex-column justify-content-around">
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" placeholder="Password*" class="form-control input"
+                                required />
+                        </div>
+                        <div class="form-group">
+                            <label for="password_confirm">Confirm Password</label>
+                            <input type="password" name="password_confirm" placeholder="Confirm Password*"
+                                class="form-control input" required />
+                        </div>
+                    </div>
+                    <!-- privacy policy -->
+                    <div class="form-group">
+                        <label for="agree" class="w-100">
+                            <input type="checkbox" name="agree" id="agree"  required>
+                            Agree with the
+                            <span class="text-danger">Privacy Policy</span>
+                        </label>
+                    </div>
+                    <!-- register button -->
+                    <div class="form-group col-md-6 mx-auto pb-5 form-end">
+                        <button type="submit" class="btn btn-dark w-100">Join Now</button>
+                    </div>
+                    <div class="container mt-4 btm-w">
+                        <p class="text-dark">Already have an account?</p>
+                        <a role="button" href="login.html" class="btn btn-outline-dark w-75">Sign In</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

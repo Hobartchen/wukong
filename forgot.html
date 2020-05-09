@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/bootstrap.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/httpVueLoader.js"></script>
+    <title>Forgot - Minders Gold Brewery</title>
+    <style>
+        .input {
+            display: inline-block;
+            width: 20em;
+        }
+
+        .form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding-bottom: 400px;
+            border-bottom: 2px solid black;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <v-nav type="reg"></v-nav>
+        <div class="container text-center mt-5">
+            <h4>Forgot Password?</h4>
+            <p>
+                Enter the email address associated with your account.
+                <br>
+                We will send you a link so you can start fresh with a new
+            </p>
+            <form action="#" class="form mb-4">
+                <div class="form-group mb-5">
+                    <label for="email">Email Address</label>
+                    <input type="email" name="email" class="form-control input" placeholder="Email Address*" required />
+                </div>
+
+                <a href="#" role="button" class="btn btn-dark">SEND LINK FOR PASSWORD CHANGE</a>
+            </form>
+
+            <a href="login.html" role="button" class="btn btn-outline-dark back">BACK</a>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

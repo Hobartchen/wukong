@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="js/httpVueLoader.js"></script>
+    <title>Reservation - Minders Gold Brewery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .btns {
+            min-height: 50vh;
+
+        }
+
+        .btn-res {
+            background-color: rgb(189, 58, 0);
+            font-weight: 500;
+            color: white;
+            width: 300px;
+        }
+
+        .info-row {
+            margin: 0;
+        }
+
+        .info-img {
+            display: block;
+            max-height: 300px;
+            max-width: 75%;
+        }
+
+        select.form-control{
+            display:inline;
+        }
+
+        .datepicker,
+        .table-condensed {
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .select_time,
+        .select_people {
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <v-nav type="Jack"></v-nav>
+        <v-article img="images/mgb_website_bkg_1080x.jpg">
+
+            <!-- Reservation buttons -->
+            <div class="row w-100 btns">
+                <div class="col-md my-auto">
+                    <button type="button" class="btn btn-res" data-toggle="modal" data-target="#exampleModalCenter">Make a reservation
+                    </button>
+                </div>
+
+                <div class="col-md my-auto">
+                    <a href="#" role="button" class="btn btn-res">Modify</a>
+                </div>
+
+                <div class="col-md my-auto">
+                    <a href="#" role="button" class="btn btn-res">Cancel</a>
+                </div>
+            </div>
+
+            <!-- dining areas -->
+            <v-dining title="Dining area 1" side="left" index="1" img="images/1.jpg"></v-dining>
+            <v-dining title="Dining area 2" side="right" index="2" img="images/2.jpg"></v-dining>
+            <v-dining title="Dining area 3" side="left" index="3" img="images/3.jpg"></v-dining>
+            <v-dining title="Dining area 4" side="right" index="4" img="images/4.jpg"></v-dining>
+
+            <!-- dining environment -->
+            <div class="bg-light w-100 text-dark pt-5">
+                <h4>Our dining environment</h4>
+                
+<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FMinersGoldBrewery%2Fvideos%2F420291645342096%2F&show_text=0&width=476" width="476" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+
+                <div class="my-5">
+
+
+                    <h6>environment info</h6>
+                    <div class="row info-row">
+
+                        <!-- stafff -->
+                        <div class="col-md">
+                            <div class="row justify-content-center">
+                                <svg class="bi bi-people-fill" width="3em" height="3em" viewBox="0 0 16 16"
+                                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 100-6 3 3 0 000 6zm-5.784 6A2.238 2.238 0 015 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 005 9c-4 0-5 3-5 4s1 1 1 1h4.216zM4.5 8a2.5 2.5 0 100-5 2.5 2.5 0 000 5z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div class="row justify-content-center">
+                                Our Staffs
+                            </div>
+                            <div class="row justify-content-center">
+                                <img src="https://www.tourismtribe.com/wp-content/uploads/image00-3-768x576.png"
+                                    class="info-img" alt="img">
+                            </div>
+                            <div class="row justify-content-center">
+                                <small class="text-muted">Staff info</small>
+                            </div>
+                        </div>
+
+                        <!-- kitchen -->
+                        <div class="col-md">
+                            <div class="row justify-content-center">
+                                <svg class="bi bi-eye-fill" width="3em" height="3em" viewBox="0 0 16 16"
+                                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.5 8a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
+                                    <path fill-rule="evenodd"
+                                        d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 100-7 3.5 3.5 0 000 7z"
+                                        clip-rule="evenodd" />
+                                </svg>
+
+                            </div>
+                            <div class="row justify-content-center">
+                                Kitchen
+                            </div>
+                            <div class="row justify-content-center">
+                                <img src="https://d2w1ef2ao9g8r9.cloudfront.net/images/hero-image/_largeHeroImageTransform/food-service-equipment.png?mtime=20190328170726&focal=none"
+                                    class="info-img" alt="img">
+                            </div>
+                            <div class="row justify-content-center">
+                                <small class="text-muted">Kitchen info</small>
+                            </div>
+                        </div>
+
+                        <!-- Special requirements -->
+                        <div class="col-md">
+                            <div class="row justify-content-center">
+                                <svg class="bi bi-bell-fill" width="3em" height="3em" viewBox="0 0 16 16"
+                                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M8 16a2 2 0 002-2H6a2 2 0 002 2zm.995-14.901a1 1 0 10-1.99 0A5.002 5.002 0 003 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" />
+                                </svg>
+                            </div>
+                            <div class="row justify-content-center">
+                                Special Requirements
+                            </div>
+                            <div class="row justify-content-center">
+                                <img src="https://i.pinimg.com/originals/18/79/e6/1879e60e57e8669cc1c3c13b2bf11dc9.png"
+                                    alt="img" class="info-img">
+                            </div>
+                            <div class="row justify-content-center">
+                                <small class="text-muted">Special Requirements Info</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </v-article>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Make a reservation</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <form>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <label for="reservation-name" class="col-form-label">*Name:</label>
+                            <input type="text" class="form-control" id="reservation-name">
+
+                            <label for="reservation-email" class="col-form-label">*Email:</label>
+                            <input type="text" class="form-control" id="reservation-email">
+
+                            <label for="reservation-phone" class="col-form-label">*Phone:</label>
+                            <input type="text" class="form-control" id="reservation-phone">
+
+                            <label for="reservation-preference" class="col-form-label">Seating preference:</label>
+                            <select id="reservation-preference" class="form-control selectpicker" data-dropup-auto="false">
+                                <option data-icon="fas fa-chair">Dining Area</option>
+                                <option data-icon="fas fa-chair">Tasting Area</option>
+                                <option data-icon="fas fa-chair">Bar Seat</option>
+                                <option data-icon="fas fa-chair">Deck</option>
+                                <option data-icon="fas fa-chair">None</option>
+                            </select><br>
+
+                            <label for="reservation-requirement" class="col-form-label">Special Requirement:</label>
+                            <textarea class="form-control" id="reservation-requirement"></textarea>
+                        </div>
+
+                        <div class="col">
+                            <div class="input-group datepicker date" id="datepicker">
+                                <input type="hidden" class="form-control">
+                            </div>
+
+                            <div class="select_time">
+                                <select class="selectpicker" data-dropup-auto="false">
+                                    <option data-icon="far fa-clock">11:00-12:30</option>
+                                    <option data-icon="far fa-clock">12:30-14:00</option>
+                                    <option data-icon="far fa-clock">14:00-15:30</option>
+                                    <option data-icon="far fa-clock">15:30-17:00</option>
+                                </select>
+                            </div>
+
+                            <div class="select_people">
+                                <select class="selectpicker" data-dropup-auto="false">
+                                    <option data-icon="far fa-user">1 people</option>
+                                    <option data-icon="far fa-user">2 people</option>
+                                    <option data-icon="far fa-user">3 people</option>
+                                    <option data-icon="far fa-user">4 people</option>
+                                    <option data-icon="far fa-user">5 people</option>
+                                    <option data-icon="far fa-user">6 people</option>
+                                    <option data-icon="far fa-user">7 people</option>
+                                    <option data-icon="far fa-user">8 people</option>
+                                    <option data-icon="far fa-user">9 people</option>
+                                    <option data-icon="far fa-user">10 people</option>
+                                    <option data-icon="far fa-user">More than 10</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" style="display:block;margin:0 auto">Submit</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $('#datepicker').datepicker({
+            inline: true,
+            sideBySide: true
+        });
+    });  
+
+
+    $(function () {
+        $('select').selectpicker({
+            
+        });
+        
+    });
+</script>

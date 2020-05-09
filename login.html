@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/bootstrap.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/httpVueLoader.js"></script>
+    <title>Login - Minders Gold Brewery</title>
+    <style>
+        label,
+        .input {
+            display: inline-block;
+        }
+
+        .input {
+            width: 15em;
+        }
+
+        label {
+            width: 5em;
+        }
+
+        form {
+            margin: 0 auto;
+            max-width: 400px;
+        }
+
+        .form-end {
+            border-bottom: 2px solid black;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <v-nav type="reg"></v-nav>
+        <div class="container text-center mt-4">
+            <h1>Welcome Back!</h1>
+            <p class="mt-4">Sign in with your email</p>
+            <form action="#">
+                <div class="form-group mb-4">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" class="form-control input" placeholder="Emails"  required/>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" class="form-control input" id="password"
+                        placeholder="Password" required/>
+                </div>
+                <div class="form-group">
+                    <a href="forgot.html" class="text-dark"><small>Forgot password?</small></a>
+                </div>
+
+                <div class="form-group mt-5 pb-5 form-end">
+                    <button type="submit" class="btn btn-dark w-75">Sign In</button>
+                </div>
+
+                <div class="container mt-4">
+                    <p class="text-dark">Need an account?</p>
+                    <a role="button" href="register.html" class="btn btn-outline-dark w-75">Sign Up</a>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

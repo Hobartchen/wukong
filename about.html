@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/bootstrap.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/httpVueLoader.js"></script>
+    <title>About - Minders Gold Brewery</title>
+    <style>
+        .open-hrs {
+            list-style: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <v-nav type="main"></v-nav>
+        <v-article img="images/Miner_sGoldBrewery-32_large.jpg" type="article">
+            <h1>About</h1>
+            <p>Miners Gold Brewery is a restaurant and taproom located in the mining town of Beaconsfield in Tasmania's
+                Tamar Valley.</p>
+            <p>We offer brewery tours and tastings, as well as a range of fresh beer and local food.</p>
+            <p>you can find us right next to the Beaconsifield Mine and Heritage Centre.</p>
+            <div class="w-100 text-left">
+
+                <h3 class="mt-5 mb-4">Opening hours:</h3>
+                <p>While we finish renovations, we will only be open for lunches - eventually we will be open every day
+                    and
+                    for dinners too.</p>
+                <table class="open-hrs">
+                    <tr>
+                        <td>Fri: </td>
+                        <td>11am - 5pm</td>
+                    </tr>
+                    <tr>
+                        <td>Sat: </td>
+                        <td>11am - 5pm</td>
+                    </tr>
+                    <tr>
+                        <td>Sun: </td>
+                        <td>11am - 5pm</td>
+                    </tr>
+                </table>
+            </div>
+        </v-article>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
