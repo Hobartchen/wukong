@@ -202,13 +202,13 @@
                     <div class="row">
                         <div class="col">
                             <label for="reservation-name" class="col-form-label">*Name:</label>
-                            <input type="text" class="form-control" id="reservation-name">
+                            <input type="text" class="form-control" id="reservation-name" required>
 
                             <label for="reservation-email" class="col-form-label">*Email:</label>
-                            <input type="text" class="form-control" id="reservation-email">
+                            <input type="text" class="form-control" id="reservation-email" required>
 
                             <label for="reservation-phone" class="col-form-label">*Phone:</label>
-                            <input type="text" class="form-control" id="reservation-phone">
+                            <input type="text" class="form-control" id="reservation-phone" required>
 
                             <label for="reservation-preference" class="col-form-label">Seating preference:</label>
                             <select id="reservation-preference" class="form-control selectpicker" data-dropup-auto="false">
@@ -225,11 +225,11 @@
 
                         <div class="col">
                             <div class="input-group datepicker date" id="datepicker">
-                                <input type="hidden" class="form-control">
+                                <input type="hidden" class="form-control" required>
                             </div>
 
                             <div class="select_time">
-                                <select class="selectpicker" data-dropup-auto="false">
+                                <select class="selectpicker" data-dropup-auto="false" required>
                                     <option data-icon="far fa-clock">11:00-12:30</option>
                                     <option data-icon="far fa-clock">12:30-14:00</option>
                                     <option data-icon="far fa-clock">14:00-15:30</option>
@@ -238,7 +238,7 @@
                             </div>
 
                             <div class="select_people">
-                                <select class="selectpicker" data-dropup-auto="false">
+                                <select class="selectpicker" data-dropup-auto="false" required>
                                     <option data-icon="far fa-user">1 people</option>
                                     <option data-icon="far fa-user">2 people</option>
                                     <option data-icon="far fa-user">3 people</option>
@@ -260,7 +260,7 @@
             </div>
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" style="display:block;margin:0 auto">Submit</button>
+                <button type="submit" class="btn btn-primary" style="display:block;margin:0 auto">Submit</button>
             </div>
 
         </div>
