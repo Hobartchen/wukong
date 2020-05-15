@@ -13,16 +13,11 @@
       <!-- Branding -->
       
       <a href="./index.html">
-        <img
+        <img v-if="type != 'reg'"
           src="./images/black.png">
         </img>
-      </a>
 
-      <!-- Logo for reg && login -->
-      
-      <a href="./index.html"
-        v-if="type == 'reg'">
-        <img
+        <img v-if="type == 'reg'"
           src="./images/white.png">
         </img>
       </a>
@@ -47,13 +42,17 @@
           <li></li>
           <li class="nav-item">
             <div class="col">
+
               <div
                 class="row nav-title"
-                :class="{ 'nav-title-underline': type == 'main' }"
-              >
+                :class="{ 'nav-title-underline': type == 'main' }">
+
                 <span class="mx-auto">Miners Gold Brewery</span>
+
               </div>
+
               <div v-if="type == 'main'" class="row text-center nav-list">
+
                 <div class="col-md">
                   <a href="about.html" class="nav-link text-dark">About</a>
                 </div>
@@ -66,12 +65,14 @@
                 <div class="col-md">
                   <a href="news.html" class="nav-link text-dark">News</a>
                 </div>
+
               </div>
             </div>
           </li>
 
           <!-- Login entry -->
           <li class="nav-item">
+
             <div
               v-if="type == 'main'"
               class="row h-100 align-items-center justify-content-center text-center"
@@ -82,6 +83,19 @@
                 >Register</a
               >
             </div>
+
+            <div
+              v-if="type == 'reg'"
+              class="row h-100 align-items-center justify-content-center text-center"
+              style="visibility:hidden;"
+            >
+              <a href="login.html" class="col-md nav-link text-dark">Login</a>
+              <span class="acc-div"></span>
+              <a href="register.html" class="col-md nav-link text-dark"
+                >Register</a
+              >
+            </div>
+
             <div
               v-if="type != 'main' && type != 'reg'"
               class="row h-100 align-items-center justify-content-center text-center pr-2"
